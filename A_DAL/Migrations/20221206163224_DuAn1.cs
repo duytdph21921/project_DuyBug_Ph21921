@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace A_DAL.Migrations
 {
-    public partial class database : Migration
+    public partial class DuAn1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -26,13 +26,12 @@ namespace A_DAL.Migrations
                 columns: table => new
                 {
                     id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Ma = table.Column<string>(type: "Varchar(100)", nullable: false),
+                    Ma = table.Column<string>(type: "Varchar(100)", nullable: true),
                     Ten = table.Column<string>(type: "NVarchar(100)", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_ChucVus", x => x.id);
-                    table.UniqueConstraint("AK_ChucVus_Ma", x => x.Ma);
                 });
 
             migrationBuilder.CreateTable(
@@ -40,13 +39,12 @@ namespace A_DAL.Migrations
                 columns: table => new
                 {
                     id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Ma = table.Column<string>(type: "Varchar(100)", nullable: false),
+                    Ma = table.Column<string>(type: "Varchar(100)", nullable: true),
                     Ten = table.Column<string>(type: "NVarchar(100)", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_DongCos", x => x.id);
-                    table.UniqueConstraint("AK_DongCos_Ma", x => x.Ma);
                 });
 
             migrationBuilder.CreateTable(
@@ -54,7 +52,7 @@ namespace A_DAL.Migrations
                 columns: table => new
                 {
                     id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Ma = table.Column<string>(type: "varchar(30)", nullable: false),
+                    Ma = table.Column<string>(type: "varchar(30)", nullable: true),
                     Ten = table.Column<string>(type: "nvarchar(100)", nullable: true),
                     TenDem = table.Column<string>(type: "nvarchar(100)", nullable: true),
                     Ho = table.Column<string>(type: "nvarchar(100)", nullable: true),
@@ -69,7 +67,6 @@ namespace A_DAL.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_KhachHangs", x => x.id);
-                    table.UniqueConstraint("AK_KhachHangs_Ma", x => x.Ma);
                 });
 
             migrationBuilder.CreateTable(
@@ -77,13 +74,12 @@ namespace A_DAL.Migrations
                 columns: table => new
                 {
                     id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Ma = table.Column<string>(type: "Varchar(100)", nullable: false),
+                    Ma = table.Column<string>(type: "Varchar(100)", nullable: true),
                     Ten = table.Column<string>(type: "NVarchar(100)", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_KhoiDongs", x => x.id);
-                    table.UniqueConstraint("AK_KhoiDongs_Ma", x => x.Ma);
                 });
 
             migrationBuilder.CreateTable(
@@ -91,7 +87,7 @@ namespace A_DAL.Migrations
                 columns: table => new
                 {
                     id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Ma = table.Column<string>(type: "varchar(100)", nullable: false),
+                    Ma = table.Column<string>(type: "varchar(100)", nullable: true),
                     Ten = table.Column<string>(type: "nvarchar(100)", nullable: true),
                     mota = table.Column<string>(type: "nvarchar(100)", nullable: true),
                     ngayTao = table.Column<DateTime>(type: "datetime", nullable: true),
@@ -102,7 +98,6 @@ namespace A_DAL.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_KhuyenMais", x => x.id);
-                    table.UniqueConstraint("AK_KhuyenMais_Ma", x => x.Ma);
                 });
 
             migrationBuilder.CreateTable(
@@ -110,13 +105,12 @@ namespace A_DAL.Migrations
                 columns: table => new
                 {
                     id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Ma = table.Column<string>(type: "Varchar(100)", nullable: false),
+                    Ma = table.Column<string>(type: "Varchar(100)", nullable: true),
                     Ten = table.Column<string>(type: "NVarchar(100)", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_LoaiXes", x => x.id);
-                    table.UniqueConstraint("AK_LoaiXes_Ma", x => x.Ma);
                 });
 
             migrationBuilder.CreateTable(
@@ -124,13 +118,12 @@ namespace A_DAL.Migrations
                 columns: table => new
                 {
                     id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Ma = table.Column<string>(type: "Varchar(100)", nullable: false),
+                    Ma = table.Column<string>(type: "Varchar(100)", nullable: true),
                     Ten = table.Column<string>(type: "NVarchar(100)", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_MauSacs", x => x.id);
-                    table.UniqueConstraint("AK_MauSacs_Ma", x => x.Ma);
                 });
 
             migrationBuilder.CreateTable(
@@ -138,13 +131,12 @@ namespace A_DAL.Migrations
                 columns: table => new
                 {
                     id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Ma = table.Column<string>(type: "Varchar(100)", nullable: false),
+                    Ma = table.Column<string>(type: "Varchar(100)", nullable: true),
                     Ten = table.Column<string>(type: "NVarchar(100)", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_NSXes", x => x.id);
-                    table.UniqueConstraint("AK_NSXes_Ma", x => x.Ma);
                 });
 
             migrationBuilder.CreateTable(
@@ -152,13 +144,12 @@ namespace A_DAL.Migrations
                 columns: table => new
                 {
                     id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Ma = table.Column<string>(type: "Varchar(100)", nullable: false),
+                    Ma = table.Column<string>(type: "Varchar(100)", nullable: true),
                     Ten = table.Column<string>(type: "NVarchar(100)", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_SanPhams", x => x.id);
-                    table.UniqueConstraint("AK_SanPhams_Ma", x => x.Ma);
                 });
 
             migrationBuilder.CreateTable(
@@ -169,7 +160,7 @@ namespace A_DAL.Migrations
                     ChuVuId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     GuiBcId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     Anhid = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Ma = table.Column<string>(type: "varchar(100)", nullable: false),
+                    Ma = table.Column<string>(type: "varchar(100)", nullable: true),
                     Ten = table.Column<string>(type: "nvarchar(100)", nullable: true),
                     TenDem = table.Column<string>(type: "nvarchar(100)", nullable: true),
                     Ho = table.Column<string>(type: "nvarchar(100)", nullable: true),
@@ -183,7 +174,6 @@ namespace A_DAL.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_NhanViens", x => x.id);
-                    table.UniqueConstraint("AK_NhanViens_Ma", x => x.Ma);
                     table.ForeignKey(
                         name: "FK_NhanViens_Anh_Anhid",
                         column: x => x.Anhid,
@@ -281,7 +271,7 @@ namespace A_DAL.Migrations
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     khachHangID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     nhanVienID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    MA = table.Column<string>(type: "varchar(100)", nullable: false),
+                    MA = table.Column<string>(type: "varchar(100)", nullable: true),
                     ngayTao = table.Column<DateTime>(type: "datetime", nullable: true),
                     ngayThanhToan = table.Column<DateTime>(type: "datetime", nullable: true),
                     NgayShip = table.Column<DateTime>(type: "datetime", nullable: true),
@@ -295,7 +285,6 @@ namespace A_DAL.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_HoaDons", x => x.Id);
-                    table.UniqueConstraint("AK_HoaDons_MA", x => x.MA);
                     table.ForeignKey(
                         name: "FK_HoaDons_KhachHangs_khachHangID",
                         column: x => x.khachHangID,

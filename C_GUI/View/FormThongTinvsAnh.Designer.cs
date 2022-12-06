@@ -39,6 +39,7 @@
             this.RD_NSX = new System.Windows.Forms.RadioButton();
             this.RD_MauSac = new System.Windows.Forms.RadioButton();
             this.RD_LoaiXe = new System.Windows.Forms.RadioButton();
+            this.BTN_Them = new FontAwesome.Sharp.IconButton();
             this.PCB_Test = new FontAwesome.Sharp.IconPictureBox();
             this.BTN_ThemAnh = new FontAwesome.Sharp.IconButton();
             this.label12 = new System.Windows.Forms.Label();
@@ -201,6 +202,20 @@
             this.RD_LoaiXe.UseVisualStyleBackColor = true;
             this.RD_LoaiXe.CheckedChanged += new System.EventHandler(this.RD_LoaiXe_CheckedChanged);
             // 
+            // BTN_Them
+            // 
+            this.BTN_Them.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BTN_Them.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.BTN_Them.IconColor = System.Drawing.Color.Black;
+            this.BTN_Them.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BTN_Them.Location = new System.Drawing.Point(244, 201);
+            this.BTN_Them.Name = "BTN_Them";
+            this.BTN_Them.Size = new System.Drawing.Size(232, 99);
+            this.BTN_Them.TabIndex = 6;
+            this.BTN_Them.Text = "THÊM";
+            this.BTN_Them.UseVisualStyleBackColor = true;
+            this.BTN_Them.Click += new System.EventHandler(this.BTN_Them_Click);
+            // 
             // PCB_Test
             // 
             this.PCB_Test.BackColor = System.Drawing.SystemColors.HighlightText;
@@ -313,6 +328,10 @@
             this.groupBox1.Controls.Add(this.TB_Ten);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.TB_Ten);
+            this.groupBox1.Controls.Add(this.TB_Ma);
+            this.groupBox1.Controls.Add(this.BTN_ThemAnh);
             this.groupBox1.Location = new System.Drawing.Point(8, 8);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1129, 690);
@@ -336,6 +355,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.BTN_Them);
             this.panel1.Controls.Add(this.BTN_Sua);
             this.panel1.Controls.Add(this.BTN_Xoa);
             this.panel1.Location = new System.Drawing.Point(1159, 824);

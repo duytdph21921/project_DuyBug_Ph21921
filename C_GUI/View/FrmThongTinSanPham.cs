@@ -1,6 +1,8 @@
+
 ﻿using B_BUS.IService;
 using B_BUS.Service;
 using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -84,6 +86,7 @@ namespace C_GUI.View
         private void CB_Anh_SelectedIndexChanged(object sender, EventArgs e)
         {
             loadanh();
+
         }
     }
 }

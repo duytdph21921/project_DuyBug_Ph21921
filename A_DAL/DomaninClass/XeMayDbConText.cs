@@ -22,8 +22,8 @@ namespace A_DAL.DomaninClass
         {
             // Thực hiện các ràng buộc kết nối
             base.OnConfiguring(optionsBuilder.
-                UseSqlServer("Data Source=Duy;Initial Catalog=QL_Duan1_QuanLyCuaHangBanXeMay;" +
-                "Persist Security Info=True;User ID=Duy;Password=1234"));
+                UseSqlServer("Data Source=DESKTOP-399B81S\\SQLEXPRESS;Initial Catalog=QL_Duan1_QuanLyCuaHangBanXeMay;" +
+                "Persist Security Info=True;User ID=PH22814;Password=123456"));
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace A_DAL.Migrations
 {
     [DbContext(typeof(XeMayDbConText))]
-    [Migration("20221206151919_fixdatabase")]
-    partial class fixdatabase
+    [Migration("20221206163224_DuAn1")]
+    partial class DuAn1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
