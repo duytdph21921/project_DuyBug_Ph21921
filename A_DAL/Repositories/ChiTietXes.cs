@@ -17,7 +17,7 @@ namespace A_DAL.Repositories
         {
             try
             {
-                if (chiTietXe == null) return false;
+               // if (chiTietXe == null) return false;
                 
                     _dbcontext.ChiTietXes.Add(chiTietXe);
                     _dbcontext.SaveChanges();

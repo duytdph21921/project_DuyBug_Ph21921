@@ -39,19 +39,20 @@
             this.RD_NSX = new System.Windows.Forms.RadioButton();
             this.RD_MauSac = new System.Windows.Forms.RadioButton();
             this.RD_LoaiXe = new System.Windows.Forms.RadioButton();
+            this.BTN_Them = new FontAwesome.Sharp.IconButton();
             this.PCB_Test = new FontAwesome.Sharp.IconPictureBox();
             this.BTN_ThemAnh = new FontAwesome.Sharp.IconButton();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.TB_Ten = new System.Windows.Forms.TextBox();
             this.TB_Ma = new System.Windows.Forms.TextBox();
-            this.BTN_Them = new FontAwesome.Sharp.IconButton();
             this.PL_khung = new System.Windows.Forms.Panel();
             this.GB_ThongTin = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dtg_Show = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.BTN_Sua = new FontAwesome.Sharp.IconButton();
+            this.RD_SanPham = new System.Windows.Forms.RadioButton();
             this.GB_ThuocTinh.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PCB_Test)).BeginInit();
             this.PL_khung.SuspendLayout();
@@ -96,6 +97,7 @@
             // GB_ThuocTinh
             // 
             this.GB_ThuocTinh.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.GB_ThuocTinh.Controls.Add(this.RD_SanPham);
             this.GB_ThuocTinh.Controls.Add(this.RD_ChucVu);
             this.GB_ThuocTinh.Controls.Add(this.RD_Anh);
             this.GB_ThuocTinh.Controls.Add(this.RD_KhoiDong);
@@ -201,6 +203,20 @@
             this.RD_LoaiXe.UseVisualStyleBackColor = true;
             this.RD_LoaiXe.CheckedChanged += new System.EventHandler(this.RD_LoaiXe_CheckedChanged);
             // 
+            // BTN_Them
+            // 
+            this.BTN_Them.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BTN_Them.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.BTN_Them.IconColor = System.Drawing.Color.Black;
+            this.BTN_Them.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BTN_Them.Location = new System.Drawing.Point(802, 417);
+            this.BTN_Them.Name = "BTN_Them";
+            this.BTN_Them.Size = new System.Drawing.Size(232, 99);
+            this.BTN_Them.TabIndex = 6;
+            this.BTN_Them.Text = "THÊM";
+            this.BTN_Them.UseVisualStyleBackColor = true;
+            this.BTN_Them.Click += new System.EventHandler(this.BTN_Them_Click);
+            // 
             // PCB_Test
             // 
             this.PCB_Test.BackColor = System.Drawing.SystemColors.HighlightText;
@@ -264,20 +280,6 @@
             this.TB_Ma.Size = new System.Drawing.Size(273, 39);
             this.TB_Ma.TabIndex = 12;
             // 
-            // BTN_Them
-            // 
-            this.BTN_Them.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BTN_Them.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.BTN_Them.IconColor = System.Drawing.Color.Black;
-            this.BTN_Them.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BTN_Them.Location = new System.Drawing.Point(802, 417);
-            this.BTN_Them.Name = "BTN_Them";
-            this.BTN_Them.Size = new System.Drawing.Size(232, 99);
-            this.BTN_Them.TabIndex = 6;
-            this.BTN_Them.Text = "THÊM";
-            this.BTN_Them.UseVisualStyleBackColor = true;
-            this.BTN_Them.Click += new System.EventHandler(this.BTN_Them_Click);
-            // 
             // PL_khung
             // 
             this.PL_khung.BackColor = System.Drawing.Color.LightCyan;
@@ -306,13 +308,12 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.groupBox1.Controls.Add(this.BTN_Them);
-            this.groupBox1.Controls.Add(this.BTN_ThemAnh);
             this.groupBox1.Controls.Add(this.PCB_Test);
-            this.groupBox1.Controls.Add(this.TB_Ma);
-            this.groupBox1.Controls.Add(this.TB_Ten);
-            this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.TB_Ten);
+            this.groupBox1.Controls.Add(this.TB_Ma);
+            this.groupBox1.Controls.Add(this.BTN_ThemAnh);
             this.groupBox1.Location = new System.Drawing.Point(8, 8);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1129, 690);
@@ -336,6 +337,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.BTN_Them);
             this.panel1.Controls.Add(this.BTN_Sua);
             this.panel1.Controls.Add(this.BTN_Xoa);
             this.panel1.Location = new System.Drawing.Point(1159, 824);
@@ -356,6 +358,19 @@
             this.BTN_Sua.Text = "SỬA";
             this.BTN_Sua.UseVisualStyleBackColor = true;
             this.BTN_Sua.Click += new System.EventHandler(this.BTN_Sua_Click);
+            // 
+            // RD_SanPham
+            // 
+            this.RD_SanPham.AutoSize = true;
+            this.RD_SanPham.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.RD_SanPham.Location = new System.Drawing.Point(631, 503);
+            this.RD_SanPham.Name = "RD_SanPham";
+            this.RD_SanPham.Size = new System.Drawing.Size(187, 40);
+            this.RD_SanPham.TabIndex = 7;
+            this.RD_SanPham.TabStop = true;
+            this.RD_SanPham.Text = "Sản Phẩm";
+            this.RD_SanPham.UseVisualStyleBackColor = true;
+            this.RD_SanPham.CheckedChanged += new System.EventHandler(this.RD_SanPham_CheckedChanged);
             // 
             // FormThongTinvsAnh
             // 
@@ -406,5 +421,6 @@
         private System.Windows.Forms.DataGridView dtg_Show;
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton BTN_Sua;
+        private System.Windows.Forms.RadioButton RD_SanPham;
     }
 }

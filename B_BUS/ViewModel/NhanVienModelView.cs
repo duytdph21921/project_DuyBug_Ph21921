@@ -28,7 +28,7 @@ namespace B_BUS.ViewModel
         public string? Hovaten { get; set; }
         public string? tenChuVu { get; set; }
         public string? nhanvienguibaocao { get; set; }
-       public  byte[] linkAnh { get; set; }
+       public string? linkAnh { get; set; }
         public string? HTTT { get; set; } 
         public string ?NamNu { get;set; }
        

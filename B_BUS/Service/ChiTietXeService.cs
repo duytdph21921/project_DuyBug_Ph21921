@@ -117,6 +117,7 @@ namespace B_BUS.Service
                                    soKhung = ctx.soKhung,
                                    soMay = ctx.soMay,
                                    moTa = ctx.moTa,
+                                   binhXang= ctx.binhXang,
                                    SoLuongTon = ctx.SoLuongTon,
                                    giaBan = ctx.giaBan,
                                    giaNhap = ctx.giaNhap,

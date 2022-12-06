@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.panel_thongtin = new System.Windows.Forms.Panel();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.BTN_SoMay = new System.Windows.Forms.Button();
+            this.BTN_SoKhung = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.TB_GiaNhap = new System.Windows.Forms.TextBox();
@@ -69,8 +74,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.PCB_ANH = new System.Windows.Forms.PictureBox();
             this.panel_dulieu = new System.Windows.Forms.Panel();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.CCB_ngungban = new System.Windows.Forms.CheckBox();
+            this.CCB_DangBan = new System.Windows.Forms.CheckBox();
             this.dtg_sanpham = new System.Windows.Forms.DataGridView();
             this.cbb_timtheoloaissp = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -78,6 +83,8 @@
             this.tb_timthotensp = new System.Windows.Forms.TextBox();
             this.btn_timiem = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.panel_thongtin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PCB_ANH)).BeginInit();
             this.panel_dulieu.SuspendLayout();
@@ -88,6 +95,11 @@
             // 
             this.panel_thongtin.BackColor = System.Drawing.SystemColors.HighlightText;
             this.panel_thongtin.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel_thongtin.Controls.Add(this.checkBox6);
+            this.panel_thongtin.Controls.Add(this.checkBox5);
+            this.panel_thongtin.Controls.Add(this.checkBox4);
+            this.panel_thongtin.Controls.Add(this.BTN_SoMay);
+            this.panel_thongtin.Controls.Add(this.BTN_SoKhung);
             this.panel_thongtin.Controls.Add(this.label20);
             this.panel_thongtin.Controls.Add(this.label19);
             this.panel_thongtin.Controls.Add(this.TB_GiaNhap);
@@ -133,6 +145,62 @@
             this.panel_thongtin.Name = "panel_thongtin";
             this.panel_thongtin.Size = new System.Drawing.Size(1144, 1843);
             this.panel_thongtin.TabIndex = 13;
+            // 
+            // checkBox6
+            // 
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Checked = true;
+            this.checkBox6.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox6.Location = new System.Drawing.Point(926, 623);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(159, 36);
+            this.checkBox6.TabIndex = 72;
+            this.checkBox6.Text = "checkBox6";
+            this.checkBox6.UseVisualStyleBackColor = true;
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Checked = true;
+            this.checkBox5.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox5.Location = new System.Drawing.Point(926, 665);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(159, 36);
+            this.checkBox5.TabIndex = 71;
+            this.checkBox5.Text = "checkBox5";
+            this.checkBox5.UseVisualStyleBackColor = true;
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Checked = true;
+            this.checkBox4.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox4.Location = new System.Drawing.Point(926, 585);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(159, 36);
+            this.checkBox4.TabIndex = 70;
+            this.checkBox4.Text = "checkBox4";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // BTN_SoMay
+            // 
+            this.BTN_SoMay.Location = new System.Drawing.Point(926, 802);
+            this.BTN_SoMay.Name = "BTN_SoMay";
+            this.BTN_SoMay.Size = new System.Drawing.Size(150, 46);
+            this.BTN_SoMay.TabIndex = 68;
+            this.BTN_SoMay.Text = "Lấy Mã";
+            this.BTN_SoMay.UseVisualStyleBackColor = true;
+            this.BTN_SoMay.Click += new System.EventHandler(this.BTN_SoMay_Click);
+            // 
+            // BTN_SoKhung
+            // 
+            this.BTN_SoKhung.Location = new System.Drawing.Point(926, 730);
+            this.BTN_SoKhung.Name = "BTN_SoKhung";
+            this.BTN_SoKhung.Size = new System.Drawing.Size(150, 46);
+            this.BTN_SoKhung.TabIndex = 67;
+            this.BTN_SoKhung.Text = "Lấy Mã";
+            this.BTN_SoKhung.UseVisualStyleBackColor = true;
+            this.BTN_SoKhung.Click += new System.EventHandler(this.BTN_SoKhung_Click);
             // 
             // label20
             // 
@@ -221,7 +289,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label16.Location = new System.Drawing.Point(445, 472);
+            this.label16.Location = new System.Drawing.Point(413, 474);
             this.label16.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(136, 32);
@@ -232,7 +300,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label15.Location = new System.Drawing.Point(445, 388);
+            this.label15.Location = new System.Drawing.Point(413, 390);
             this.label15.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(114, 32);
@@ -243,7 +311,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label14.Location = new System.Drawing.Point(445, 312);
+            this.label14.Location = new System.Drawing.Point(413, 314);
             this.label14.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(126, 32);
@@ -254,7 +322,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label13.Location = new System.Drawing.Point(445, 230);
+            this.label13.Location = new System.Drawing.Point(413, 232);
             this.label13.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(97, 32);
@@ -265,7 +333,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label12.Location = new System.Drawing.Point(445, 150);
+            this.label12.Location = new System.Drawing.Point(413, 152);
             this.label12.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(62, 32);
@@ -276,7 +344,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(445, 68);
+            this.label11.Location = new System.Drawing.Point(413, 70);
             this.label11.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(110, 32);
@@ -295,7 +363,7 @@
             // CB_KhoiDong
             // 
             this.CB_KhoiDong.FormattingEnabled = true;
-            this.CB_KhoiDong.Location = new System.Drawing.Point(632, 464);
+            this.CB_KhoiDong.Location = new System.Drawing.Point(600, 466);
             this.CB_KhoiDong.Name = "CB_KhoiDong";
             this.CB_KhoiDong.Size = new System.Drawing.Size(242, 40);
             this.CB_KhoiDong.TabIndex = 50;
@@ -303,7 +371,7 @@
             // CB_DongCo
             // 
             this.CB_DongCo.FormattingEnabled = true;
-            this.CB_DongCo.Location = new System.Drawing.Point(632, 385);
+            this.CB_DongCo.Location = new System.Drawing.Point(600, 387);
             this.CB_DongCo.Name = "CB_DongCo";
             this.CB_DongCo.Size = new System.Drawing.Size(242, 40);
             this.CB_DongCo.TabIndex = 49;
@@ -311,7 +379,7 @@
             // CB_SanPham
             // 
             this.CB_SanPham.FormattingEnabled = true;
-            this.CB_SanPham.Location = new System.Drawing.Point(632, 304);
+            this.CB_SanPham.Location = new System.Drawing.Point(600, 306);
             this.CB_SanPham.Name = "CB_SanPham";
             this.CB_SanPham.Size = new System.Drawing.Size(242, 40);
             this.CB_SanPham.TabIndex = 48;
@@ -319,7 +387,7 @@
             // CB_LoaiXe
             // 
             this.CB_LoaiXe.FormattingEnabled = true;
-            this.CB_LoaiXe.Location = new System.Drawing.Point(632, 222);
+            this.CB_LoaiXe.Location = new System.Drawing.Point(600, 224);
             this.CB_LoaiXe.Name = "CB_LoaiXe";
             this.CB_LoaiXe.Size = new System.Drawing.Size(242, 40);
             this.CB_LoaiXe.TabIndex = 47;
@@ -327,7 +395,7 @@
             // CB_NSX
             // 
             this.CB_NSX.FormattingEnabled = true;
-            this.CB_NSX.Location = new System.Drawing.Point(632, 142);
+            this.CB_NSX.Location = new System.Drawing.Point(600, 144);
             this.CB_NSX.Name = "CB_NSX";
             this.CB_NSX.Size = new System.Drawing.Size(242, 40);
             this.CB_NSX.TabIndex = 46;
@@ -335,7 +403,7 @@
             // CB_MauSac
             // 
             this.CB_MauSac.FormattingEnabled = true;
-            this.CB_MauSac.Location = new System.Drawing.Point(632, 60);
+            this.CB_MauSac.Location = new System.Drawing.Point(600, 62);
             this.CB_MauSac.Name = "CB_MauSac";
             this.CB_MauSac.Size = new System.Drawing.Size(242, 40);
             this.CB_MauSac.TabIndex = 45;
@@ -355,6 +423,7 @@
             this.btn_sua.TabIndex = 43;
             this.btn_sua.Text = "SỬA";
             this.btn_sua.UseVisualStyleBackColor = true;
+            this.btn_sua.Click += new System.EventHandler(this.btn_sua_Click);
             // 
             // btn_xoa
             // 
@@ -371,6 +440,7 @@
             this.btn_xoa.TabIndex = 44;
             this.btn_xoa.Text = "XÓA";
             this.btn_xoa.UseVisualStyleBackColor = true;
+            this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
             // 
             // btn_them
             // 
@@ -389,6 +459,7 @@
             this.btn_them.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_them.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_them.UseVisualStyleBackColor = true;
+            this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
             // 
             // rdb_ngungban
             // 
@@ -539,8 +610,10 @@
             // 
             this.panel_dulieu.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panel_dulieu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel_dulieu.Controls.Add(this.checkBox2);
-            this.panel_dulieu.Controls.Add(this.checkBox1);
+            this.panel_dulieu.Controls.Add(this.radioButton2);
+            this.panel_dulieu.Controls.Add(this.radioButton1);
+            this.panel_dulieu.Controls.Add(this.CCB_ngungban);
+            this.panel_dulieu.Controls.Add(this.CCB_DangBan);
             this.panel_dulieu.Controls.Add(this.dtg_sanpham);
             this.panel_dulieu.Controls.Add(this.cbb_timtheoloaissp);
             this.panel_dulieu.Controls.Add(this.label10);
@@ -555,27 +628,29 @@
             this.panel_dulieu.Size = new System.Drawing.Size(1425, 1843);
             this.panel_dulieu.TabIndex = 14;
             // 
-            // checkBox2
+            // CCB_ngungban
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(1180, 102);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(5);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(167, 36);
-            this.checkBox2.TabIndex = 23;
-            this.checkBox2.Text = "Ngừng bán";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.CCB_ngungban.AutoSize = true;
+            this.CCB_ngungban.Location = new System.Drawing.Point(1180, 102);
+            this.CCB_ngungban.Margin = new System.Windows.Forms.Padding(5);
+            this.CCB_ngungban.Name = "CCB_ngungban";
+            this.CCB_ngungban.Size = new System.Drawing.Size(167, 36);
+            this.CCB_ngungban.TabIndex = 23;
+            this.CCB_ngungban.Text = "Ngừng bán";
+            this.CCB_ngungban.UseVisualStyleBackColor = true;
+            this.CCB_ngungban.CheckedChanged += new System.EventHandler(this.CCB_ngungban_CheckedChanged);
             // 
-            // checkBox1
+            // CCB_DangBan
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(985, 102);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(5);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(150, 36);
-            this.checkBox1.TabIndex = 22;
-            this.checkBox1.Text = "Đang bán";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.CCB_DangBan.AutoSize = true;
+            this.CCB_DangBan.Location = new System.Drawing.Point(985, 102);
+            this.CCB_DangBan.Margin = new System.Windows.Forms.Padding(5);
+            this.CCB_DangBan.Name = "CCB_DangBan";
+            this.CCB_DangBan.Size = new System.Drawing.Size(150, 36);
+            this.CCB_DangBan.TabIndex = 22;
+            this.CCB_DangBan.Text = "Đang bán";
+            this.CCB_DangBan.UseVisualStyleBackColor = true;
+            this.CCB_DangBan.CheckedChanged += new System.EventHandler(this.CCB_DangBan_CheckedChanged);
             // 
             // dtg_sanpham
             // 
@@ -587,6 +662,7 @@
             this.dtg_sanpham.RowTemplate.Height = 29;
             this.dtg_sanpham.Size = new System.Drawing.Size(1399, 1189);
             this.dtg_sanpham.TabIndex = 21;
+            this.dtg_sanpham.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_sanpham_CellClick);
             // 
             // cbb_timtheoloaissp
             // 
@@ -649,6 +725,28 @@
             this.label8.TabIndex = 18;
             this.label8.Text = "Tên sản phẩm :";
             // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(984, 150);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(184, 36);
+            this.radioButton1.TabIndex = 24;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "radioButton1";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(1180, 152);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(184, 36);
+            this.radioButton2.TabIndex = 25;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "radioButton2";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
             // FrmThongTinSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
@@ -705,8 +803,8 @@
         private System.Windows.Forms.ComboBox CB_NSX;
         private System.Windows.Forms.ComboBox CB_MauSac;
         private System.Windows.Forms.Panel panel_dulieu;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox CCB_ngungban;
+        private System.Windows.Forms.CheckBox CCB_DangBan;
         private System.Windows.Forms.DataGridView dtg_sanpham;
         private System.Windows.Forms.ComboBox cbb_timtheoloaissp;
         private System.Windows.Forms.Label label10;
@@ -720,5 +818,12 @@
         private System.Windows.Forms.TextBox TB_GiaBan;
         private System.Windows.Forms.TextBox TB_SoLuong;
         private System.Windows.Forms.TextBox TB_SoMay;
+        private System.Windows.Forms.Button BTN_SoMay;
+        private System.Windows.Forms.Button BTN_SoKhung;
+        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.CheckBox checkBox5;
+        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }

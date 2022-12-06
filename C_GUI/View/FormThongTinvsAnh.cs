@@ -28,6 +28,7 @@ namespace C_GUI.View
         IKhoiDongService _IkhoiDongService;
         ILoaiXeService _IloaiXeService;
         IChucVuService _IChucVuService;
+        ISanPhamService _ISanphamservice;
         // tạo 1 trường để lưu đường dẫn ảnh
         string imageUrl = "";
         Guid _IdChung;
@@ -42,6 +43,7 @@ namespace C_GUI.View
             _IkhoiDongService = new KhoiDongService();
             _IloaiXeService = new LoaiXeService();
             _INsxService = new NsxService();
+            _ISanphamservice = new SanPhamService();
             loadataa();
         }
     
@@ -53,9 +55,19 @@ namespace C_GUI.View
                 id = _IDanh,
                 Ma = TB_Ma.Text,
                 Ten = TB_Ten.Text,
-               Link = imageUrl
+                Link = imageUrl
             };
             return anhViewModel;
+        }
+        public SanPhamViewModel suaxoaSp()
+        {
+            SanPhamViewModel sanPhamViewModel = new SanPhamViewModel()
+            {
+                id = _IdChung,
+                Ma = TB_Ma.Text,
+                Ten = TB_Ten.Text,
+            };
+            return sanPhamViewModel;
         }
         public ChuVuViewModel suaxoaCV()
         {
@@ -123,7 +135,29 @@ namespace C_GUI.View
         }
         #endregion 
         #region methow lấy  thuộc tính 
-       
+        public AnhViewModel them()
+        {
+            AnhViewModel anhViewModel = new AnhViewModel()
+            {
+                // Id = new Guid(),
+                Ma = TB_Ma.Text,
+                Ten = TB_Ten.Text,
+                Link = imageUrl
+
+
+            };
+            return anhViewModel;
+        }
+        public SanPhamViewModel Themsp()
+        {
+            SanPhamViewModel sanPhamViewModel = new SanPhamViewModel()
+            {
+                
+                Ma = TB_Ma.Text,
+                Ten = TB_Ten.Text,
+            };
+            return sanPhamViewModel;
+        }
         public ChuVuViewModel ThemCv()
         {
             ChuVuViewModel chuVuViewModel = new ChuVuViewModel()
@@ -289,6 +323,21 @@ namespace C_GUI.View
                     dtg_Show.Rows.Add(item.id, item.Ma, item.Ten);
                 }
             }
+            // sản phẩm
+            if (RD_SanPham.Checked == true)
+            {
+                dtg_Show.ColumnCount = 3;
+                dtg_Show.Rows.Clear();
+                dtg_Show.Columns[0].Name = "id";
+                dtg_Show.Columns[1].Name = "ma";
+                dtg_Show.Columns[2].Name = "ten";
+
+                dtg_Show.Columns[0].Visible = false;
+                foreach (var item in _ISanphamservice.Getall())
+                {
+                    dtg_Show.Rows.Add(item.id, item.Ma, item.Ten);
+                }
+            }
         }
         #endregion
     
@@ -299,7 +348,7 @@ namespace C_GUI.View
             TB_Ma.Text = "";
             PCB_Test.IconChar = FontAwesome.Sharp.IconChar.User;
         }
-
+      
         #region Radio checked in properties
         private void RD_LoaiXe_CheckedChanged(object sender, EventArgs e)
         {
@@ -310,6 +359,16 @@ namespace C_GUI.View
                 loadataa();
                 clear();
                
+            }
+        }
+        private void RD_SanPham_CheckedChanged(object sender, EventArgs e)
+        {
+            if (RD_SanPham.Checked == true)
+            {
+                PCB_Test.Visible = false;
+                BTN_ThemAnh.Visible = false;
+                loadataa();
+                clear();
             }
         }
 
@@ -403,21 +462,21 @@ namespace C_GUI.View
         {
             try
             {
-                if (RD_Anh.Checked == true)
-                {
+            if (RD_Anh.Checked == true)
+            {
 
-                    _IDanh = Guid.Parse(dtg_Show.CurrentRow.Cells[0].Value.ToString());
-                    TB_Ma.Text = dtg_Show.CurrentRow.Cells[1].Value.ToString();
-                    TB_Ten.Text = dtg_Show.CurrentRow.Cells[2].Value.ToString();
-                    PCB_Test.Image = Image.FromFile(_IAnhservice.GetAll().FirstOrDefault(c => c.id == _IDanh).Link);
+                _IDanh = Guid.Parse(dtg_Show.CurrentRow.Cells[0].Value.ToString());
+                TB_Ma.Text = dtg_Show.CurrentRow.Cells[1].Value.ToString();
+                TB_Ten.Text = dtg_Show.CurrentRow.Cells[2].Value.ToString();
+                PCB_Test.Image = Image.FromFile(_IAnhservice.GetAll().FirstOrDefault(c => c.id == _IDanh).Link);
 
-                }
-                if (RD_ChucVu.Checked == true || RD_DongCo.Checked == true || RD_KhoiDong.Checked == true || RD_LoaiXe.Checked == true || RD_MauSac.Checked == true||RD_NSX.Checked == true)
-                {
-                    _IdChung = Guid.Parse(dtg_Show.CurrentRow.Cells[0].Value.ToString());
-                    TB_Ma.Text = dtg_Show.CurrentRow.Cells[1].Value.ToString();
-                    TB_Ten.Text = dtg_Show.CurrentRow.Cells[2].Value.ToString();
-                }
+            }
+                if (RD_ChucVu.Checked == true || RD_DongCo.Checked == true || RD_KhoiDong.Checked == true || RD_LoaiXe.Checked == true || RD_MauSac.Checked == true||RD_NSX.Checked == true || RD_SanPham.Checked == true)
+            {
+                _IdChung = Guid.Parse(dtg_Show.CurrentRow.Cells[0].Value.ToString());
+                TB_Ma.Text = dtg_Show.CurrentRow.Cells[1].Value.ToString();
+                TB_Ten.Text = dtg_Show.CurrentRow.Cells[2].Value.ToString();
+            }
             }
             catch (Exception ex)
             {
@@ -436,9 +495,14 @@ namespace C_GUI.View
                 MessageBox.Show(_IAnhservice.add(Anhs()));
                 loadataa();
             }
-            if (RD_ChucVu.Checked == true)
+            else if (RD_ChucVu.Checked == true)
             {
                 MessageBox.Show(_IChucVuService.add(ThemCv()));
+                loadataa();
+            }
+            else if (RD_SanPham.Checked==true)
+            {
+                MessageBox.Show(_ISanphamservice.add(Themsp()));
                 loadataa();
             }
             else if (RD_MauSac.Checked == true)
@@ -481,6 +545,11 @@ namespace C_GUI.View
                 MessageBox.Show(_IChucVuService.update(suaxoaCV()));
                 loadataa();
             }
+            else if (RD_SanPham.Checked == true)
+            {
+                MessageBox.Show(_ISanphamservice.update(suaxoaSp()));
+                loadataa();
+            }
             else if (RD_MauSac.Checked == true)
             {
                 MessageBox.Show(_IMauSacService.update(SuaXoaMs()));
@@ -520,6 +589,13 @@ namespace C_GUI.View
                 MessageBox.Show(_IChucVuService.delete(suaxoaCV()));
                 loadataa();
             }
+            else if (RD_SanPham.Checked == true)
+            {
+            
+                    MessageBox.Show(_ISanphamservice.delete(suaxoaSp()));
+                    loadataa();
+                
+            }
             else if (RD_MauSac.Checked == true)
             {
                 MessageBox.Show(_IMauSacService.delete(SuaXoaMs()));
@@ -550,6 +626,9 @@ namespace C_GUI.View
 
         private void BTN_ThemAnh_Click(object sender, EventArgs e)
         {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "";
+            ofd.ShowDialog(); //sau khi chọn file thì of chưa 1 đường dẫn 
 
             OpenFileDialog of = new OpenFileDialog();
             of.Filter = "";
@@ -560,8 +639,7 @@ namespace C_GUI.View
         }
 
        
-
-        
     }
-}
+    }
+
 
