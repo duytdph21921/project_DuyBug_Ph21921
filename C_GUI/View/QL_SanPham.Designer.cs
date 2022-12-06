@@ -65,7 +65,7 @@
             // 
             this.panel_Ql_SanPham.Location = new System.Drawing.Point(3, 42);
             this.panel_Ql_SanPham.Name = "panel_Ql_SanPham";
-            this.panel_Ql_SanPham.Size = new System.Drawing.Size(2593, 1914);
+            this.panel_Ql_SanPham.Size = new System.Drawing.Size(2799, 1914);
             this.panel_Ql_SanPham.TabIndex = 11;
             // 
             // QL_SanPham

@@ -106,7 +106,8 @@ namespace B_BUS.Service
                                {
                                    id = ctx.id,
                                    MauSac = ms.Ten,
-                                   linkAnh = a.Link,
+                                   linkAnh = a.Ma,
+                                   
                                    NSX  = nsx.Ten,
                                    LoaiXe = lsx.Ten,
                                    SanPham = sp.Ten,

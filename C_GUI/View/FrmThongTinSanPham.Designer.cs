@@ -29,6 +29,13 @@
         private void InitializeComponent()
         {
             this.panel_thongtin = new System.Windows.Forms.Panel();
+            this.LB_Anh = new System.Windows.Forms.Label();
+            this.LB_KhoiDong = new System.Windows.Forms.Label();
+            this.LB_dongCo = new System.Windows.Forms.Label();
+            this.LB_SanPham = new System.Windows.Forms.Label();
+            this.LB_LoaiXe = new System.Windows.Forms.Label();
+            this.LB_NSX = new System.Windows.Forms.Label();
+            this.LB_Mausac = new System.Windows.Forms.Label();
             this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.checkBox5 = new System.Windows.Forms.CheckBox();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
@@ -83,8 +90,6 @@
             this.tb_timthotensp = new System.Windows.Forms.TextBox();
             this.btn_timiem = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.panel_thongtin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PCB_ANH)).BeginInit();
             this.panel_dulieu.SuspendLayout();
@@ -95,6 +100,13 @@
             // 
             this.panel_thongtin.BackColor = System.Drawing.SystemColors.HighlightText;
             this.panel_thongtin.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel_thongtin.Controls.Add(this.LB_Anh);
+            this.panel_thongtin.Controls.Add(this.LB_KhoiDong);
+            this.panel_thongtin.Controls.Add(this.LB_dongCo);
+            this.panel_thongtin.Controls.Add(this.LB_SanPham);
+            this.panel_thongtin.Controls.Add(this.LB_LoaiXe);
+            this.panel_thongtin.Controls.Add(this.LB_NSX);
+            this.panel_thongtin.Controls.Add(this.LB_Mausac);
             this.panel_thongtin.Controls.Add(this.checkBox6);
             this.panel_thongtin.Controls.Add(this.checkBox5);
             this.panel_thongtin.Controls.Add(this.checkBox4);
@@ -139,12 +151,81 @@
             this.panel_thongtin.Controls.Add(this.label2);
             this.panel_thongtin.Controls.Add(this.label1);
             this.panel_thongtin.Controls.Add(this.PCB_ANH);
-            this.panel_thongtin.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_thongtin.Location = new System.Drawing.Point(0, 0);
             this.panel_thongtin.Margin = new System.Windows.Forms.Padding(5);
             this.panel_thongtin.Name = "panel_thongtin";
             this.panel_thongtin.Size = new System.Drawing.Size(1144, 1843);
             this.panel_thongtin.TabIndex = 13;
+            // 
+            // LB_Anh
+            // 
+            this.LB_Anh.AutoSize = true;
+            this.LB_Anh.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.LB_Anh.ForeColor = System.Drawing.Color.Red;
+            this.LB_Anh.Location = new System.Drawing.Point(46, 555);
+            this.LB_Anh.Name = "LB_Anh";
+            this.LB_Anh.Size = new System.Drawing.Size(0, 32);
+            this.LB_Anh.TabIndex = 79;
+            // 
+            // LB_KhoiDong
+            // 
+            this.LB_KhoiDong.AutoSize = true;
+            this.LB_KhoiDong.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.LB_KhoiDong.ForeColor = System.Drawing.Color.Red;
+            this.LB_KhoiDong.Location = new System.Drawing.Point(875, 527);
+            this.LB_KhoiDong.Name = "LB_KhoiDong";
+            this.LB_KhoiDong.Size = new System.Drawing.Size(0, 32);
+            this.LB_KhoiDong.TabIndex = 78;
+            // 
+            // LB_dongCo
+            // 
+            this.LB_dongCo.AutoSize = true;
+            this.LB_dongCo.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.LB_dongCo.ForeColor = System.Drawing.Color.Red;
+            this.LB_dongCo.Location = new System.Drawing.Point(419, 444);
+            this.LB_dongCo.Name = "LB_dongCo";
+            this.LB_dongCo.Size = new System.Drawing.Size(0, 32);
+            this.LB_dongCo.TabIndex = 77;
+            // 
+            // LB_SanPham
+            // 
+            this.LB_SanPham.AutoSize = true;
+            this.LB_SanPham.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.LB_SanPham.ForeColor = System.Drawing.Color.Red;
+            this.LB_SanPham.Location = new System.Drawing.Point(875, 314);
+            this.LB_SanPham.Name = "LB_SanPham";
+            this.LB_SanPham.Size = new System.Drawing.Size(0, 32);
+            this.LB_SanPham.TabIndex = 76;
+            // 
+            // LB_LoaiXe
+            // 
+            this.LB_LoaiXe.AutoSize = true;
+            this.LB_LoaiXe.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.LB_LoaiXe.ForeColor = System.Drawing.Color.Red;
+            this.LB_LoaiXe.Location = new System.Drawing.Point(875, 232);
+            this.LB_LoaiXe.Name = "LB_LoaiXe";
+            this.LB_LoaiXe.Size = new System.Drawing.Size(0, 32);
+            this.LB_LoaiXe.TabIndex = 75;
+            // 
+            // LB_NSX
+            // 
+            this.LB_NSX.AutoSize = true;
+            this.LB_NSX.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.LB_NSX.ForeColor = System.Drawing.Color.Red;
+            this.LB_NSX.Location = new System.Drawing.Point(875, 147);
+            this.LB_NSX.Name = "LB_NSX";
+            this.LB_NSX.Size = new System.Drawing.Size(0, 32);
+            this.LB_NSX.TabIndex = 74;
+            // 
+            // LB_Mausac
+            // 
+            this.LB_Mausac.AutoSize = true;
+            this.LB_Mausac.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.LB_Mausac.ForeColor = System.Drawing.Color.Red;
+            this.LB_Mausac.Location = new System.Drawing.Point(875, 71);
+            this.LB_Mausac.Name = "LB_Mausac";
+            this.LB_Mausac.Size = new System.Drawing.Size(0, 32);
+            this.LB_Mausac.TabIndex = 73;
             // 
             // checkBox6
             // 
@@ -289,7 +370,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label16.Location = new System.Drawing.Point(413, 474);
+            this.label16.Location = new System.Drawing.Point(413, 532);
             this.label16.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(136, 32);
@@ -363,10 +444,11 @@
             // CB_KhoiDong
             // 
             this.CB_KhoiDong.FormattingEnabled = true;
-            this.CB_KhoiDong.Location = new System.Drawing.Point(600, 466);
+            this.CB_KhoiDong.Location = new System.Drawing.Point(600, 524);
             this.CB_KhoiDong.Name = "CB_KhoiDong";
             this.CB_KhoiDong.Size = new System.Drawing.Size(242, 40);
             this.CB_KhoiDong.TabIndex = 50;
+            this.CB_KhoiDong.SelectedIndexChanged += new System.EventHandler(this.CB_KhoiDong_SelectedIndexChanged);
             // 
             // CB_DongCo
             // 
@@ -375,6 +457,7 @@
             this.CB_DongCo.Name = "CB_DongCo";
             this.CB_DongCo.Size = new System.Drawing.Size(242, 40);
             this.CB_DongCo.TabIndex = 49;
+            this.CB_DongCo.SelectedIndexChanged += new System.EventHandler(this.CB_DongCo_SelectedIndexChanged);
             // 
             // CB_SanPham
             // 
@@ -383,6 +466,7 @@
             this.CB_SanPham.Name = "CB_SanPham";
             this.CB_SanPham.Size = new System.Drawing.Size(242, 40);
             this.CB_SanPham.TabIndex = 48;
+            this.CB_SanPham.SelectedIndexChanged += new System.EventHandler(this.CB_SanPham_SelectedIndexChanged);
             // 
             // CB_LoaiXe
             // 
@@ -391,6 +475,7 @@
             this.CB_LoaiXe.Name = "CB_LoaiXe";
             this.CB_LoaiXe.Size = new System.Drawing.Size(242, 40);
             this.CB_LoaiXe.TabIndex = 47;
+            this.CB_LoaiXe.SelectedIndexChanged += new System.EventHandler(this.CB_LoaiXe_SelectedIndexChanged);
             // 
             // CB_NSX
             // 
@@ -399,6 +484,7 @@
             this.CB_NSX.Name = "CB_NSX";
             this.CB_NSX.Size = new System.Drawing.Size(242, 40);
             this.CB_NSX.TabIndex = 46;
+            this.CB_NSX.SelectedIndexChanged += new System.EventHandler(this.CB_NSX_SelectedIndexChanged);
             // 
             // CB_MauSac
             // 
@@ -407,6 +493,7 @@
             this.CB_MauSac.Name = "CB_MauSac";
             this.CB_MauSac.Size = new System.Drawing.Size(242, 40);
             this.CB_MauSac.TabIndex = 45;
+            this.CB_MauSac.SelectedIndexChanged += new System.EventHandler(this.CB_MauSac_SelectedIndexChanged);
             // 
             // btn_sua
             // 
@@ -610,8 +697,6 @@
             // 
             this.panel_dulieu.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panel_dulieu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel_dulieu.Controls.Add(this.radioButton2);
-            this.panel_dulieu.Controls.Add(this.radioButton1);
             this.panel_dulieu.Controls.Add(this.CCB_ngungban);
             this.panel_dulieu.Controls.Add(this.CCB_DangBan);
             this.panel_dulieu.Controls.Add(this.dtg_sanpham);
@@ -621,8 +706,7 @@
             this.panel_dulieu.Controls.Add(this.tb_timthotensp);
             this.panel_dulieu.Controls.Add(this.btn_timiem);
             this.panel_dulieu.Controls.Add(this.label8);
-            this.panel_dulieu.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel_dulieu.Location = new System.Drawing.Point(1142, 0);
+            this.panel_dulieu.Location = new System.Drawing.Point(1154, 0);
             this.panel_dulieu.Margin = new System.Windows.Forms.Padding(5);
             this.panel_dulieu.Name = "panel_dulieu";
             this.panel_dulieu.Size = new System.Drawing.Size(1425, 1843);
@@ -660,7 +744,7 @@
             this.dtg_sanpham.Name = "dtg_sanpham";
             this.dtg_sanpham.RowHeadersWidth = 51;
             this.dtg_sanpham.RowTemplate.Height = 29;
-            this.dtg_sanpham.Size = new System.Drawing.Size(1399, 1189);
+            this.dtg_sanpham.Size = new System.Drawing.Size(1399, 1215);
             this.dtg_sanpham.TabIndex = 21;
             this.dtg_sanpham.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_sanpham_CellClick);
             // 
@@ -725,33 +809,11 @@
             this.label8.TabIndex = 18;
             this.label8.Text = "Tên sản phẩm :";
             // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(984, 150);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(184, 36);
-            this.radioButton1.TabIndex = 24;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(1180, 152);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(184, 36);
-            this.radioButton2.TabIndex = 25;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "radioButton2";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
             // FrmThongTinSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2567, 1843);
+            this.ClientSize = new System.Drawing.Size(2576, 1523);
             this.Controls.Add(this.panel_dulieu);
             this.Controls.Add(this.panel_thongtin);
             this.Name = "FrmThongTinSanPham";
@@ -823,7 +885,12 @@
         private System.Windows.Forms.CheckBox checkBox6;
         private System.Windows.Forms.CheckBox checkBox5;
         private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Label LB_Mausac;
+        private System.Windows.Forms.Label LB_KhoiDong;
+        private System.Windows.Forms.Label LB_dongCo;
+        private System.Windows.Forms.Label LB_SanPham;
+        private System.Windows.Forms.Label LB_LoaiXe;
+        private System.Windows.Forms.Label LB_NSX;
+        private System.Windows.Forms.Label LB_Anh;
     }
 }
