@@ -16,7 +16,6 @@ namespace A_DAL.Configurations
             builder.HasKey(x => x.id);
 
             builder.Property(x => x.Ma).HasColumnType("Varchar(100)");
-           // builder.HasAlternateKey(x => x.Ma);
             builder.Property(x => x.Ten).HasColumnType("NVarchar(100)");
         }
     }
