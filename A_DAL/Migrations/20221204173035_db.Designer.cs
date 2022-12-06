@@ -4,14 +4,16 @@ using A_DAL.DomaninClass;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace A_DAL.Migrations
 {
     [DbContext(typeof(XeMayDbConText))]
-    partial class XeMayDbConTextModelSnapshot : ModelSnapshot
+    [Migration("20221204173035_db")]
+    partial class db
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -135,12 +137,15 @@ namespace A_DAL.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Ma")
+                        .IsRequired()
                         .HasColumnType("Varchar(100)");
 
                     b.Property<string>("Ten")
                         .HasColumnType("NVarchar(100)");
 
                     b.HasKey("id");
+
+                    b.HasAlternateKey("Ma");
 
                     b.ToTable("ChucVus");
                 });
@@ -155,6 +160,7 @@ namespace A_DAL.Migrations
                         .HasColumnType("Nvarchar(100)");
 
                     b.Property<string>("MA")
+                        .IsRequired()
                         .HasColumnType("varchar(100)");
 
                     b.Property<DateTime?>("NgayMongMuon")
@@ -190,6 +196,8 @@ namespace A_DAL.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasAlternateKey("MA");
 
                     b.HasIndex("khachHangID");
 
@@ -246,6 +254,7 @@ namespace A_DAL.Migrations
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("Ma")
+                        .IsRequired()
                         .HasColumnType("varchar(30)");
 
                     b.Property<DateTime?>("NgaySinh")
@@ -274,6 +283,8 @@ namespace A_DAL.Migrations
 
                     b.HasKey("id");
 
+                    b.HasAlternateKey("Ma");
+
                     b.ToTable("KhachHangs");
                 });
 
@@ -284,6 +295,7 @@ namespace A_DAL.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Ma")
+                        .IsRequired()
                         .HasColumnType("varchar(100)");
 
                     b.Property<DateTime?>("NgayketThuc")
@@ -306,6 +318,8 @@ namespace A_DAL.Migrations
 
                     b.HasKey("id");
 
+                    b.HasAlternateKey("Ma");
+
                     b.ToTable("KhuyenMais");
                 });
 
@@ -316,12 +330,15 @@ namespace A_DAL.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Ma")
+                        .IsRequired()
                         .HasColumnType("Varchar(100)");
 
                     b.Property<string>("Ten")
                         .HasColumnType("NVarchar(100)");
 
                     b.HasKey("id");
+
+                    b.HasAlternateKey("Ma");
 
                     b.ToTable("NSXes");
                 });
@@ -350,6 +367,7 @@ namespace A_DAL.Migrations
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("Ma")
+                        .IsRequired()
                         .HasColumnType("varchar(100)");
 
                     b.Property<string>("MatKhau")
@@ -375,6 +393,8 @@ namespace A_DAL.Migrations
 
                     b.HasKey("id");
 
+                    b.HasAlternateKey("Ma");
+
                     b.HasIndex("Anhid");
 
                     b.HasIndex("ChuVuId");
@@ -391,6 +411,7 @@ namespace A_DAL.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Ma")
+                        .IsRequired()
                         .HasColumnType("Varchar(100)");
 
                     b.Property<string>("Ten")
@@ -410,6 +431,7 @@ namespace A_DAL.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Ma")
+                        .IsRequired()
                         .HasColumnType("Varchar(100)");
 
                     b.Property<string>("Ten")
@@ -429,12 +451,15 @@ namespace A_DAL.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Ma")
+                        .IsRequired()
                         .HasColumnType("Varchar(100)");
 
                     b.Property<string>("Ten")
                         .HasColumnType("NVarchar(100)");
 
                     b.HasKey("id");
+
+                    b.HasAlternateKey("Ma");
 
                     b.ToTable("LoaiXes");
                 });
@@ -446,12 +471,15 @@ namespace A_DAL.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Ma")
+                        .IsRequired()
                         .HasColumnType("Varchar(100)");
 
                     b.Property<string>("Ten")
                         .HasColumnType("NVarchar(100)");
 
                     b.HasKey("id");
+
+                    b.HasAlternateKey("Ma");
 
                     b.ToTable("MauSacs");
                 });
@@ -470,6 +498,8 @@ namespace A_DAL.Migrations
                         .HasColumnType("NVarchar(100)");
 
                     b.HasKey("id");
+
+                    b.HasAlternateKey("Ma");
 
                     b.ToTable("SanPhams");
                 });

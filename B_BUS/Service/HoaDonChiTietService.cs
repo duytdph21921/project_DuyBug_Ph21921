@@ -63,7 +63,7 @@ namespace B_BUS.Service
                 HoaDonChitiet hoaDonChitiet = new HoaDonChitiet()
                 {
                     ChiTietXeId = hoaDonChiTietViewModel.ChiTietXeId,
-                    HoaDonId = hoaDonChiTietViewModel.ChiTietXeId,
+                    HoaDonId = hoaDonChiTietViewModel.HoaDonId,
                     KhuyenMaiID = hoaDonChiTietViewModel.KhuyenMaiID,
                     soLuong = hoaDonChiTietViewModel.soLuong,
                     DonGia = hoaDonChiTietViewModel.DonGia,

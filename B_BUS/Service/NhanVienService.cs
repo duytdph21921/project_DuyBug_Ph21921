@@ -59,7 +59,7 @@ namespace B_BUS.Service
                                  Ma = nv.Ma,
                                  tenChuVu = nv.ChuVuId != null ? _ChuVu.GetAll().FirstOrDefault(c=>c.id == nv.ChuVuId).Ten.ToString() : null,
                                  nhanvienguibaocao = nv.GuiBcId != null ? _INhanVien.getAll().FirstOrDefault(c=>c.id == nv.GuiBcId).Ten.ToString() : null,
-                                // linkAnh = nv.Anhid != null ? _Anh.GetAll().FirstOrDefault(c=>c.id == nv.Anhid).Link.ToString() :null,
+                                 linkAnh = nv.Anhid != null ? _Anh.GetAll().FirstOrDefault(c=>c.id == nv.Anhid).Link.ToString() :null,
                                  Hovaten = nv.Ho + nv.TenDem + nv.Ten,
                                  NgaySinh = nv.NgaySinh,
                                  sdt= nv.sdt,
